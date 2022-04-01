@@ -1,0 +1,11 @@
+.container-home {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 30px;
+}
+
+.container-home img {
+  object-fit: cover;
+}
