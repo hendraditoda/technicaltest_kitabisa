@@ -1,24 +1,13 @@
 import React, { useEffect } from 'react';
-import {
-  Card,
-  Col,
-  Divider,
-  Row,
-  Skeleton,
-  Typography,
-  Progress,
-  Button,
-} from 'antd';
+import { Card, Col, Row, Typography, Progress, Button } from 'antd';
 
 import { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+
 import '../css/home.css';
 import logo from '../css/logo-kita-bisa2.png';
 
 const { Title } = Typography;
-
-const { Meta } = Card;
 
 const Home = () => {
   let [dataProduct, setDataProduct] = useState([]);
@@ -45,7 +34,7 @@ const Home = () => {
     var rupiah = '';
     var angkarev = angka.toString().split('').reverse().join('');
     for (var i = 0; i < angkarev.length; i++)
-      if (i % 3 == 0) rupiah += angkarev.substr(i, 3) + '.';
+      if (i % 3 === 0) rupiah += angkarev.substr(i, 3) + '.';
     rupiah = rupiah
       .split('', rupiah.length - 1)
       .reverse()
